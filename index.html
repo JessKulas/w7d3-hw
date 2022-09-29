@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <Nav>
+        <ul>
+            <li><a href="default.asp">Weather</a></li>
+            <li><a href="news.asp">Home</a></li>
+            <li><a href="contact.asp">Racer</a></li>
+            <li><a href="about.asp">Sample</a></li>
+        </ul>
+    </Nav>
+    <div class="main">
+        <p style="background-image: url('F1.jpg');"></p>
+        <form>
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInput"></label>
+                    <input type="text" class="form-control mb-2" id="inlineFormInput">
+                </div>
+                <div class="col-auto">
+                    <label class="sr-only" for="inlineFormInputGroup"></label>
+                    <div class="input-group mb-2">
+                        <input type="text" class="form-control" id="inlineFormInputGroup">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="form-check mb-2">
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-danger mb-2">Get Standings</button>
+                </div>
+            </div>
+        </form>
+        <table id="standingsTable">
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th>Name</th>
+                    <th>Nationality</th>
+                    <th>Sponsor</th>
+                    <th>Points</th>
+                </tr>
+            </thead>
+            <tbody id="standingsLists"></tbody>
+        </table>
+
+
+        <template id="myTemplate">
+            <tr>
+                <td id="positionId"></td>
+                <td id="nameId"></td>
+                <td id="nationalityId"></td>
+                <td id="sponsorId"></td>
+                <td id="pointsId"></td>
+            </tr>
+        </template>
+
+    </div>
+    </div>
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
